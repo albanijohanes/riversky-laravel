@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    background-color: #4aaff3;
+}
+
+div #title{
+    font-size: 1.5rem;
+}
+
+div #title button{
+    float: left;
+}
+
+form button{
+    float: right;
+}
+
+#title img{
+    width: 12%;
+    float: right;
+}
+
+#card{
+    background-color: whitesmoke;
+    align-items: center;
+    width: 45%;
+    height: 50%;
+}
+
+img{
+    width: 80%;
+    height: 90%;
+}

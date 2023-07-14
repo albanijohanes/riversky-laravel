@@ -1,0 +1,40 @@
+/* Main style */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+#navigasi {
+    background-color: #041858;
+    align-items: center;
+}
+
+#navigasi a {
+    color: #ffffff;
+    padding: 0.65rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+#navbarSupportedContent a:hover {
+    border-radius: 0.86rem;
+    background-color: #ffffff;
+    color: black;
+}
+
+#navbarSupportedContent ul {
+    padding: 15px;
+}
+
+#navbarSupportedContent li {
+    padding-left: 3rem;
+}
+
+#navigasi ul {
+    align-items: center;
+    padding-left: 1.9rem;
+}
+
+img {
+    width: 5%;
+    margin-left: 10px;
+}
+
+
