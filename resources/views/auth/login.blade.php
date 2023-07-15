@@ -23,6 +23,17 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card shadow-sm mb-5">
                     <div class="card-body p-5">
+                        @if($errors->any())
+                            <div class="alert alert-danger" role="alert">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>
+                                            {{ $error }}
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <button type="submit" class="btn btn-warning"><a
                                 class="link-light link-offset-2 link-underline link-underline-opacity-0"
                                 href="{{ route('index') }}">

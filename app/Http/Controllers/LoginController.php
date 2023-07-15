@@ -16,17 +16,21 @@ class LoginController extends Controller
     }
 
     public function loginPost(Request $request){
-        $validator = Validator::make($request->all(), [
+        $validasi = Validator::make($request->all(), [
             'username' => 'required',
             'password' => 'required'
         ]);
+
+        if ($validasi->fails()) {
+            return redirect()->back()->withErrors($validasi)->withInput();
+        }
 
         if(Auth::attempt(['username' => $request->username, 'password' => $request->password])){
             $request->session()->regenerate();
 
             return redirect()->route('admin');
         }
-        return redirect()->back()->with('errors', 'Username atau password salah');
+        return redirect()->back()->with('errors', 'Username atau password salah')->withInput();
     }
 
     public function logout(Request $request){

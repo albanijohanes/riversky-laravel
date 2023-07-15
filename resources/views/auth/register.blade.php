@@ -23,47 +23,69 @@
             <div class="col-md-6 offset-md-3">
                 <div class="card shadow-sm mb-5">
                     <div class="card-body p-5">
-                        <button type="submit" class="btn btn-warning"><a
-                            class="link-light link-offset-2 link-underline link-underline-opacity-0"
-                            href="{{ route('login') }}">
-                            <
-                        </a></button>
+                        @if(Session::has('error'))
+                            <div class="alert alert-danger" role="alert">
+                                <p>
+                                    {{ Session::get('error') }}
+                                </p>
+                            </div>
+                        @endif
+                        <button type="submit" class="btn btn-warning">
+                            <a class="link-light link-offset-2 link-underline link-underline-opacity-0"
+                                href="{{ route('login') }}"> < </a>
+                        </button>
                         <form action="{{ route('register.post') }}" class="form" method="POST">
                             @csrf
                             <div class="text-center pb-2" id="title">
                                 Login Riversky
-                                <img src="{{ asset('assets/img/logoangkatan.png') }}"
-                                    alt="RIVERSKY">
+                                <img src="{{ asset('assets/img/logoangkatan.png') }}" alt="RIVERSKY">
                             </div>
                             <div class="mb-3">
                                 <label for="username" class="form-label">Username</label>
                                 <input type="text" class="form-control" id="username" name="username"
                                     placeholder="Enter Username">
+                                @error('username')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="name" class="form-label">Nama Lengkap</label>
-                                <input type="text" class="form-control" id="name" name="name"
-                                    placeholder="Enter Nama Lengkap">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Nama Lengkap" value="{{ old('name') }}">
+                                @error('nama')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="nim" class="form-label">NIM</label>
-                                <input type="text" class="form-control" id="nim" name="nim"
-                                    placeholder="Enter NIM">
+                                <input type="text" class="form-control" id="nim" name="nim" placeholder="Enter NIM" value="{{ old('nim') }}">
+                                @error('nim')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
+
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control" id="email" name="email"
                                     placeholder="Enter test@mail.com">
+                                @error('email')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" class="form-control" id="password" name="password"
                                     placeholder="Enter Password">
+                                @error('password')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <div class="mb-3">
-                                <label for="Password_confirmation" class="form-label">Password Confirmation</label>
-                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation"
-                                    placeholder="Password Confirmation">
+                                <label for="password_confirmation" class="form-label">Password Confirmation</label>
+                                <input type="password" class="form-control" id="password_confirmation"
+                                    name="password_confirmation" placeholder="Password Confirmation">
+                                @error('password_confirmation')
+                                    <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
