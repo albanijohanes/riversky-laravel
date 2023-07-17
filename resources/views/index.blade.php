@@ -1,19 +1,18 @@
 @extends('layouts.layout')
 @section('content')
-<div class="container mt-3">
+<div class="container-fluid" style="background-color: #026481">
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('assets/img/logoangkatan.png') }}" class="d-block w-100"
+            <div class="carousel-item active p-2">
+                <img src="{{ asset('assets/img/background.jpg') }}" class="rounded-4 mx-auto d-block p-2 w-75"
                     alt="Logo">
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/logoangkatan.png') }}" class="d-block w-100"
+            <div class="carousel-item p-2">
+                <img src="{{ asset('assets/img/shop-bg.jpg') }}" class="rounded mx-auto d-block p-2 w-75"
                     alt="Logo">
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('assets/img/logoangkatan.png') }}" class="d-block w-100"
-                    alt="Logo">
+            <div class="carousel-item p-2">
+                <img src="{{ asset('assets/img/a.jpg') }}" class="rounded mx-auto d-block p-2 w-75" alt="Logo">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
