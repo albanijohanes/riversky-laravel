@@ -1,5 +1,4 @@
 @extends('layouts.layout')
-@include('layouts.navbar')
 @section('content')
 <div class="container mt-3">
     <div id="carouselExample" class="carousel slide">
