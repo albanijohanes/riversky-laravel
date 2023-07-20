@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 @section('content')
-<div class="container-fluid" style="background-color: #026481">
+<div class="container-fluid mb-2" style="background-color: #026481">
     <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active p-2">
@@ -24,5 +24,9 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+</div>
+
+<div class="container-fluid">
+    <h1>Ini isi content pada halaman utama</h1>
 </div>
 @endsection

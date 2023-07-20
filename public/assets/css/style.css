@@ -10,12 +10,13 @@
     color: #ffffff;
     padding: 0.65rem;
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
 }
 
 #navbarSupportedContent a:hover {
     border-radius: 0.86rem;
-    background-color: #ffffff;
+    background-color: #70C2EC;
     color: black;
 }
 
@@ -37,6 +38,3 @@ img {
     margin-left: 10px;
 }
 
-div #container{
-    background-color: #22A1E2;
-}
