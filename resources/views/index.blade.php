@@ -27,6 +27,18 @@
 </div>
 
 <div class="container-fluid">
-    <h1>Ini isi content pada halaman utama</h1>
+    <div class="row">
+        <div class="col-8">
+            <h3>
+                Riversky adalah
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod velit vel justo bibendum
+            </p>
+        </div>
+        <div class="col-4">
+            <img class="rounded float-end" src="{{ asset('assets/img/logoangkatan.png') }}" alt="testing">
+        </div>
+    </div>
 </div>
 @endsection
